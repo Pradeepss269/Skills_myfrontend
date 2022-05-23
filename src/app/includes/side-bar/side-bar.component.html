@@ -1,0 +1,30 @@
+<ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+  <li class="nav-item">
+    <a class="nav-link py-3 border-bottom" [ngClass]="{'text-rigth': is_open === true}"><i (click)="toggle_side_bars()" class="fa fa-bars"></i></a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active py-3 border-bottom" [ngClass]="{'text_left': is_open === true}"><i class="fa fa-home"></i>
+      <span *ngIf="is_open">Home</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link py-3 border-bottom" [ngClass]="{'text_left': is_open === true}"><i class="fa fa-user"></i>
+      <span *ngIf="is_open">Account</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link py-3 border-bottom" [ngClass]="{'text_left': is_open === true}"><i class="fa fa-tachometer"></i>
+      <span *ngIf="is_open">Perfomance</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link py-3 border-bottom" [ngClass]="{'text_left': is_open === true}"><i class="fa fa-calendar"></i>
+      <span *ngIf="is_open">Schedule</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link py-3 border-bottom" [ngClass]="{'text_left': is_open === true}"><i class="fa fa-bookmark"></i>
+      <span *ngIf="is_open">Saved</span>
+    </a>
+  </li>
+</ul>

@@ -1,0 +1,17 @@
+.main-bar{
+  box-shadow: 1px 3px 4px 0px #b3afaf33;
+  height: 58px;
+  display: flex;
+  padding: 5px 10px;
+}
+.commontab{
+  width: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.commontab:hover{
+  background-color: #e0e0e0;
+}

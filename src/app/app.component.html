@@ -1,0 +1,10 @@
+<app-loader *ngIf="loader"></app-loader>
+  <app-header></app-header>
+<div class="main-flex">
+  <div class="side-width" [ngClass]="{'expand': is_open === true}">
+    <app-side-bar (toggle_side_bar)="toggle_side_bar($event)"></app-side-bar>
+  </div>
+  <div class="main-panel" [ngClass]="{'main-panel-expand': is_open === true}">
+    <router-outlet></router-outlet>
+  </div>
+</div>

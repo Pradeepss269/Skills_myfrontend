@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="barChartDiv">
+      <canvas baseChart
+        height="240px"
+        width="100%"
+        chartType="bar"
+        [datasets]="chart_1.datasets"
+        [labels]="chart_1.labels"
+        [options]="chart_1.options"
+        [legend]=true>
+      </canvas>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="curveChart">
+      <canvas baseChart
+        chartType="line"
+        height="240px"
+        width="100%"
+        [datasets]="chart_2.datasets"
+        [labels]="chart_2.labels"
+        [options]="chart_2.options"
+        [legend]="true">
+      </canvas>
+    </div>
+  </div>
+</div>
+

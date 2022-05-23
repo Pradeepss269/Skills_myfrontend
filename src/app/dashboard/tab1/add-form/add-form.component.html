@@ -1,0 +1,87 @@
+<div class="main">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>User Form</h3>
+    </div>
+  </div>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group mb-2">
+          <label>Frist name</label>
+          <input type="text" class="form-control" placeholder="Enter first name" formControlName="first_name">
+          <div class="error" *ngIf="myForm.controls['first_name'].errors">
+            <div *ngIf="myForm.controls['first_name'].errors!['required'] && myForm.controls['first_name'].touched ">
+              Please provide first name.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group mb-2">
+          <label>Last name</label>
+          <input type="text" class="form-control" placeholder="Enter last name" formControlName="last_name">
+          <div class="error" *ngIf="myForm.controls['last_name'].errors">
+            <div *ngIf="myForm.controls['last_name'].errors!['required'] && myForm.controls['last_name'].touched ">
+              Please provide last name.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group mb-2">
+          <label>Email</label>
+          <input type="email" class="form-control" placeholder="Enter email" formControlName="email">
+          <div class="error" *ngIf="myForm.controls['email'].errors">
+            <div *ngIf="myForm.controls['email'].errors!['required'] && myForm.controls['email'].touched">
+              Please provide email.
+            </div>
+          </div>
+          <div class="error" *ngIf="myForm.controls['email'].errors">
+            <div *ngIf="myForm.controls['email'].errors!['email'] && myForm.controls['email'].touched">
+              Please provide valid email.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group mb-2">
+          <label>Phone no.</label>
+          <input type="text" class="form-control" placeholder="Enter Phone number" formControlName="phone">
+          <div class="error" *ngIf="myForm.controls['phone'].errors">
+            <div *ngIf="myForm.controls['phone'].errors!['required'] && myForm.controls['phone'].touched ">
+              Please provide phone.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group mb-2">
+          <label>Country</label>
+          <input type="text" class="form-control" placeholder="Enter Country" formControlName="country">
+          <div class="error" *ngIf="myForm.controls['country'].errors">
+            <div *ngIf="myForm.controls['country'].errors!['required'] && myForm.controls['country'].touched ">
+              Please provide country.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6">
+        <div class="form-group mb-2">
+          <label>City</label>
+          <input type="text" class="form-control" placeholder="Enter City" formControlName="city">
+          <div class="error" *ngIf="myForm.controls['city'].errors">
+            <div *ngIf="myForm.controls['city'].errors['required'] && myForm.controls['city'].touched">
+              Please provide city.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary float-right" type="submit">Send</button>
+  </form>
+</div>
