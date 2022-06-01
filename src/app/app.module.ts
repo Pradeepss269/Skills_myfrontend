@@ -16,7 +16,8 @@ import { NgChartsModule } from 'ng2-charts';
 import { AddFormComponent } from './dashboard/tab1/add-form/add-form.component';
 import { DataTableComponent } from './dashboard/tab1/data-table/data-table.component';
 import { LoaderComponent } from './loader/loader.component';
-
+import { StoreModule } from '@ngrx/store';
+import { formReducer } from './store/forms.reducer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { LoaderComponent } from './loader/loader.component';
     AppRoutingModule,
     NgChartsModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({forms: formReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
